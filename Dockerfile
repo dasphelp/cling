@@ -2,7 +2,7 @@ FROM --platform=linux/amd64 ubuntu:20.04 as builder
 
 ## Install build dependencies.
 RUN apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y make gcc
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y make gcc python3.9 python3.9-dev python3-pip
 
 ADD . /repo
 WORKDIR /repo
