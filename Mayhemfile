@@ -1,0 +1,5 @@
+project: cling
+target: cling
+
+cmds:
+  - cmd: /repo/cling
