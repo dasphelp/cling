@@ -6,7 +6,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y make gcc
 
 ADD . /repo
 WORKDIR /repo
-RUN chmod +x /tools/packaging/cpt.py
+RUN chmod +x /repo/tools/packaging/cpt.py
 RUN /tools/packaging/cpt.py --check-requirements && ./cpt.py --create-dev-env Debug --with-workdir=./cling-build/
 
 
