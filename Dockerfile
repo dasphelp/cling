@@ -7,7 +7,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y make gcc
 ADD . /repo
 WORKDIR /repo
 RUN chmod +x /repo/tools/packaging/cpt.py
-RUN /repo/tools/packaging/cpt.py --check-requirements
+RUN /repo/tools/packaging/cpt.py 
 
 
 RUN mkdir -p /deps
