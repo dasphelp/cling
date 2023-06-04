@@ -8,6 +8,7 @@ ADD . /repo
 WORKDIR /repo
 RUN chmod +x /repo/tools/packaging/cpt.py
 RUN /repo/tools/packaging/cpt.py --check-requirements && /repo/tools/packaging/cpt.py --create-dev-env Debug --with-workdir=/repo/tools/packaging/cling-build/
+RUN pip3 install distro
 
 
 RUN mkdir -p /deps
